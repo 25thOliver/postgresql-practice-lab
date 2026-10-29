@@ -19,4 +19,4 @@ FROM customers c
 LEFT JOIN orders o 
     ON c.customer_id = o.customer_id 
 GROUP BY c.customer_id, c.first_name, c.last_name
-HAVING COUNT(o.order_amount) > 1;
+HAVING COUNT(o.order_id) > 1;
